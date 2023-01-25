@@ -40,7 +40,7 @@ $ rails s
 liste de contrôle
 
 ## Checksheet
-[Checksheet](https://docs.google.com/spreadsheets/d/1Ebcr4070bLf0bqVJuf3X5AjHD8qpl-mOwtJIiaz7T1U/edit?usp=share_link)
+[Checksheet](https://docs.google.com/spreadsheets/d/1Ebcr4070bLf0bqVJuf3X5AjHD8qpl-mOwtJIiaz7T1U/edit?usp=sharing)
 
 ## Catalogue Design
 [Catalogue Design](https://docs.google.com/spreadsheets/d/16X29JAXK2BVKWywn5qZUYorU7AWzt9xknwWHEx5Mlfw/edit?usp=sharing)
