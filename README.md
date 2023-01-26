@@ -46,10 +46,10 @@ liste de contrôle
 [Catalogue Design](https://docs.google.com/spreadsheets/d/16X29JAXK2BVKWywn5qZUYorU7AWzt9xknwWHEx5Mlfw/edit?usp=sharing)
 
 ## Table Definition
-[Table Definition](https://docs.google.com/spreadsheets/d/1BJVS7bI4hDVIdjZy_yT42PkQuZAOf6BnWPAGczzUqK4/edit?usp=share_link)
+[Table Definition](https://docs.google.com/spreadsheets/d/1BJVS7bI4hDVIdjZy_yT42PkQuZAOf6BnWPAGczzUqK4/edit?usp=sharing)
 
 ## ER Diagram
-[ER Diagram](https://drive.google.com/file/d/1jiS_bOtWC1ibEtJKFxW4pnyDo2YR0irB/view?usp=share_link)<br />
+[ER Diagram](https://drive.google.com/file/d/1jiS_bOtWC1ibEtJKFxW4pnyDo2YR0irB/view?usp=sharing)<br />
 ![ER Diagram picture](./public/ER.png)
 
 
