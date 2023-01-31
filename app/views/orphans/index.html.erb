@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orphans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th>Image</th>
+      <th>Sex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orphans.each do |orphan| %>
+      <tr>
+        <td><%= orphan.name %></td>
+        <td><%= orphan.description %></td>
+        <td><%= orphan.age %></td>
+        <td><%= orphan.image %></td>
+        <td><%= orphan.sex %></td>
+        <td><%= link_to 'Show', orphan %></td>
+        <td><%= link_to 'Edit', edit_orphan_path(orphan) %></td>
+        <td><%= link_to 'Destroy', orphan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orphan', new_orphan_path %>

@@ -1,0 +1,2 @@
+class HostparentsController < ApplicationController
+end

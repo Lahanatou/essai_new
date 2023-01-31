@@ -1,0 +1,15 @@
+<div class="col-sm-6">
+  <div class="right-column text-center">
+      <p class="infos">
+        Bienvenu chez vous, trouvez un bon restaurant à côté ou
+        Faite connaitre votre restaurant et attirez de nouveau clients ....
+      </p>
+      <hr>
+      <% if user_signed_in? %>
+      <%= link_to "Visiter", orphans_path, class:'fs-15 btn btn-warning' %>
+    <% else %>
+      <h6>Vous n'etes pas connecter, clique sur "Se connecter" ou créer un compte pour jouir de la platforme</h6>
+      <%= link_to "Me connecter", new_user_session_path, class:'fs-15 btn btn-warning' %>
+    <% end %>
+  </div>
+</div>
