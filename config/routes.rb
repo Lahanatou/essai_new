@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  root 'orphans#top'
-  get 'orphans/top'
+#  root 'orphans#top'
+  #get 'orphans/top'
   resources :orphans
+  #root 'orphans#dons'
+    get "orphans/don"
+    get "orphans/parrainage"
+    get "orphans/adoption"
+    get "orphans/message"
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :users, only: [:show]

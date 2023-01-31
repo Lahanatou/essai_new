@@ -11,8 +11,13 @@
 
   <body>
    <% if user_signed_in? %>
-     <%= link_to "Blog Post", orphans_path %>
-     <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+     <%= link_to "Liste des orphelins", orphans_path %>
+     <%= link_to "Faites vos dons", orphans_don_path  %>
+     <%= link_to "Espace de parrainage", orphans_parrainage_path %>
+     <%= link_to "Voulez vous adoptez?", orphans_adoption_path %>
+     <%= link_to "Envoyer nous un message", orphans_message_path %>
+<%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+
    <% else %>
      <%= link_to "Nouvel enregistrement", new_user_registration_path %>
      <%= link_to "Connexion", new_user_session_path %>
