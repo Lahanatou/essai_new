@@ -27,16 +27,32 @@
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_area :image %>
+    <h3><%= form.label :image %></h3>
+    <%= image_tag(@orphan.image.url) if @orphan.image && @orphan.image.url %>
+    <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
   </div>
 
   <div class="field">
     <%= form.label :sex %>
     <%= form.text_field :sex %>
   </div>
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.select :originalparent_id, Originalparent.all.collect { |p| [p.name, p.id]}, class: "search_label form-control", prompt: "sélectionne le parent d'origine ici" %>
+
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <% if action_name=='new' %>
+
+      <%= form.submit 'noveau orphan',class:'btn btn-primary' %> ||
+      <%= link_to 'Retour', orphans_path,class:'btn btn-primary' %>
+
+      <% else %>
+      <%= form.submit 'Modifier',class:'btn btn-primary' %>
+      <% end %>
   </div>
 <% end %>
+</div>
+</div>

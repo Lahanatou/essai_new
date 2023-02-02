@@ -2,17 +2,6 @@ class OrphansController < ApplicationController
   before_action :set_orphan, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
 
-  def don
-  end
-
-  def parrainage
-    end
-
-  def message
-    end
-
-  def adoption
-    end
 
   # GET /orphans or /orphans.json
   def index
@@ -81,5 +70,5 @@ class OrphansController < ApplicationController
     # Only allow a list of trusted parameters through.
     def orphan_params
       params.require(:orphan).permit(:name, :description, :age, :image, :sex, :user_id, :hostparent_id)
-    end
+end
 end

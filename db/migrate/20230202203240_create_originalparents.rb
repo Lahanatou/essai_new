@@ -5,8 +5,6 @@ class CreateOriginalparents < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :phone, null: false
 
-
-
       t.references :orphan, foreign_key: true
       t.references :user, foreign_key: true
       t.timestamps

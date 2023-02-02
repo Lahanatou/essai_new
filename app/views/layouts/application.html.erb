@@ -12,10 +12,10 @@
   <body>
    <% if user_signed_in? %>
      <%= link_to "Liste des orphelins", orphans_path %>
-     <%= link_to "Faites vos dons", orphans_don_path  %>
-     <%= link_to "Espace de parrainage", orphans_parrainage_path %>
-     <%= link_to "Voulez vous adoptez?", orphans_adoption_path %>
-     <%= link_to "Envoyer nous un message", orphans_message_path %>
+     <%= link_to "Faites vos dons", "#"  %>
+     <%= link_to "Espace de parrainage","#" %>
+     <%= link_to "Voulez vous adoptez?", "#"%>
+     <%= link_to "Envoyer nous un message","#" %>
 <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
 
    <% else %>

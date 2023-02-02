@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_30_212504) do
+ActiveRecord::Schema.define(version: 2023_02_02_203322) do
 
   create_table "hostparents", force: :cascade do |t|
     t.string "name", null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2023_01_30_212504) do
     t.index ["orphan_id"], name: "index_originalparents_on_orphan_id"
     t.index ["user_id"], name: "index_originalparents_on_user_id"
   end
-  
+
   create_table "orphans", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
