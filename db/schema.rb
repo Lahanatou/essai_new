@@ -16,24 +16,16 @@ ActiveRecord::Schema.define(version: 2023_02_02_203322) do
     t.string "name", null: false
     t.string "adress", null: false
     t.integer "phone", null: false
-    t.integer "orphan_id"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["orphan_id"], name: "index_hostparents_on_orphan_id"
-    t.index ["user_id"], name: "index_hostparents_on_user_id"
   end
 
   create_table "originalparents", force: :cascade do |t|
     t.string "name", null: false
-    t.string "description"
+    t.string "description", null: false
     t.integer "phone", null: false
-    t.integer "orphan_id"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["orphan_id"], name: "index_originalparents_on_orphan_id"
-    t.index ["user_id"], name: "index_originalparents_on_user_id"
   end
 
   create_table "orphans", force: :cascade do |t|
@@ -42,10 +34,12 @@ ActiveRecord::Schema.define(version: 2023_02_02_203322) do
     t.integer "age"
     t.text "image"
     t.string "sex"
+    t.integer "hostparent_id"
     t.integer "originalparent_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["hostparent_id"], name: "index_orphans_on_hostparent_id"
     t.index ["originalparent_id"], name: "index_orphans_on_originalparent_id"
     t.index ["user_id"], name: "index_orphans_on_user_id"
   end
@@ -68,10 +62,7 @@ ActiveRecord::Schema.define(version: 2023_02_02_203322) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "hostparents", "orphans"
-  add_foreign_key "hostparents", "users"
-  add_foreign_key "originalparents", "orphans"
-  add_foreign_key "originalparents", "users"
+  add_foreign_key "orphans", "hostparents"
   add_foreign_key "orphans", "originalparents"
   add_foreign_key "orphans", "users"
 end

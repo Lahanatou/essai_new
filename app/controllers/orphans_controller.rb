@@ -17,6 +17,7 @@ class OrphansController < ApplicationController
   def new
     @orphan = Orphan.new
     @hostparents = Hostparent.all.order(name: 'asc').page
+    @originalparents = Originalparent.all.order(name: 'asc').page
   end
 
   # GET /orphans/1/edit
@@ -26,6 +27,9 @@ class OrphansController < ApplicationController
   # POST /orphans or /orphans.json
   def create
     @orphan = Orphan.new(orphan_params)
+
+  #  @orphan = current_user.orphans.build(orphan_params)
+
 
     respond_to do |format|
       if @orphan.save
@@ -69,6 +73,6 @@ class OrphansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def orphan_params
-      params.require(:orphan).permit(:name, :description, :age, :image, :sex, :user_id, :hostparent_id)
+      params.require(:orphan).permit(:name, :description, :age, :image, :sex)
 end
 end
