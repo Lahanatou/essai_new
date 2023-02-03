@@ -36,6 +36,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener_web'
+  gem 'mini_magick'
+  gem 'carrierwave', '~> 2.0'
+
 
 end
 

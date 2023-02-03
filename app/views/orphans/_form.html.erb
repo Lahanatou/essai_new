@@ -26,12 +26,13 @@
     <%= form.number_field :age %>
   </div>
 
-  <div class="field">
-    <h3><%= form.label :image %></h3>
-    <%= image_tag(@orphan.image.url) if @orphan.image && @orphan.image.url %>
-    <%= form.file_field :image %>
-    <%= form.hidden_field :image_cache %>
-  </div>
+
+  <div style="width:400px;height:auto">
+  <%= form.label :image %>
+  <%= form.file_field :image ,style:"width:100%"%>
+</div>
+
+
 
   <div class="field">
     <%= form.label :sex %>

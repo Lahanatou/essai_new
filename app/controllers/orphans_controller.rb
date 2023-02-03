@@ -73,6 +73,6 @@ class OrphansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def orphan_params
-      params.require(:orphan).permit(:name, :description, :age, :image, :sex)
+      params.require(:orphan).permit(:name, :description, :age, :image, :sex ,  :image_cache )
 end
 end

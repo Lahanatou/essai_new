@@ -3,3 +3,7 @@
 <%= render 'form', originalparent: @originalparent %>
 
 <%= link_to 'Back', originalparents_path %>
+<div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
